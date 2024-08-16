@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <title>Calculator</title>
+    <link
+      rel="icon"
+      href="https://th.bing.com/th/id/OIP.M2M9CndbAOlKOrsajgP_NAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      type="image/x-icon"
+    />
+
+</head>
+
+
+
+
+
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+  <head>
+    
+  </head>
+  <style>
+    
+    .button {
+      width: 150px;
+      padding: 5px;
+      margin: 2px;
+      background-color: antiquewhite;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgb(154, 152, 152);
+      transition: all 0.2s;
+    }
+
+    .button:hover {
+      background-color: aquamarine;
+      scale: 1.2;
+    }
+
+    .button:active {
+      background-color: rgb(78, 154, 129);
+      scale: 0.9;
+    }
+
+    .input {
+      width: 250px;
+      padding: 10px;
+      margin: 1px ;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 1px 1px 3px rgb(154, 152, 152);
+    }
+
+    #finalSum {
+      width: auto;
+      height: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 5px;
+      box-shadow: 1px 1px 5px rgb(154, 152, 152);
+      background-color: white;
+      /* border: 1px solid; */
+      text-align: center;
+      color: gray;
+      animation: blink 1s linear infinite;
+    }
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.5;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+ 
+  </style>
+  
+
+  <body>
+    <div
+      style="
+        
+        margin:auto;
+        margin-top: 50px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px rgb(154, 152, 152);
+        text-align: center;
+        width: 250px;
+        padding: 35px;
+        height: 350px;
+        background-color: white;
+      "
+    >
+    
+    <div
+    style="
+          font-size: 25px;
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"
+          
+      >
+    
+      <img style="height: 45px; margin: -10px -5px;" src="https://th.bing.com/th/id/OIP.M2M9CndbAOlKOrsajgP_NAHaHa?w=181&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+     
+      CALCULATOR
+      </div>
+      <br />
+      <!-- oninput, onchange -->
+      <input
+        type="text"
+        placeholder="First number"
+        id="firstNumber"
+        class="input"
+      /><br /><br />
+      <input
+        type="text"
+        placeholder="Second number"
+        id="secondNumber"
+        class="input"
+      /><br /><br />
+      <button class="button" onclick="SUM()">Sum</button><br />
+      <button class="button" onclick="SUB()">Substract</button><br />
+      <button class="button" onclick="Multi()">Multiply</button><br />
+      <button class="button" onclick="divide()">Division</button><br />
+      <div id="finalSum">Answer</div>
+    </div>
+    <script>
+    function SUM() {
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+      document.getElementById("finalSum").innerHTML =Number(a) + Number(b);
+      document.getElementById("finalSum").style.animation = "none";
+    }
+    function SUB() {
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+      document.getElementById("finalSum").innerHTML =Number(a) -Number(b);
+      document.getElementById("finalSum").style.animation = "none";
+    }
+    function Multi() {
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+      document.getElementById("finalSum").innerHTML =Number(a) *Number(b);
+      document.getElementById("finalSum").style.animation = "none";
+    }
+    function divide() {
+      const a = document.getElementById("firstNumber").value;
+      const b = document.getElementById("secondNumber").value;
+      document.getElementById("finalSum").innerHTML =Number(a) /Number(b);
+      document.getElementById("finalSum").style.animation = "none";
+    }
+  </script>
+  </body>
+</html>
